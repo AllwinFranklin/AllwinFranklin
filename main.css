@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+:root {
+    --bluecolor: #c34bff;
+    --pinkcolor: #ff32b0;
+    --navybluecolor: #8243fa;
+    --yellowcolor: rgb(236, 232, 0);
+    --orangecolor: rgb(255, 0, 242);
+}
+
+
+/*---------Whole elements in html---------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+/*-------Outer most navigations nav tag------*/
+
+body #topheading {
+    position: absolute;
+    top: 120px;
+    color: var(--navybluecolor);
+    
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+    z-index: 1000;
+    display: flex;
+}
+
+#logo_round {
+    margin-left: 30px;
+    margin-top: 3px;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid var(--pinkcolor);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .4);
+}
+
+#logo_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 150px;
+    background-color: #fff;
+}
+
+#logo img{
+    margin-top: -5px;
+    margin-left: 27px;
+    height: 80px;
+    width: 80px;
+    background: url("img/logo.png");
+}
+
+menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 60px;
+    width: 30%;
+}
+
+menu ul {
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 60px;
+}
+
+
+menu ul li {
+    font-size: 11pt;
+    padding: 10px 15px;
+    font-weight: lighter;
+    border-radius: 5px;
+    transition: ease-in-out .2s;
+}
+
+menu ul a{
+    color: black;
+    text-decoration: none;
+}
+
+menu ul li:hover {
+    color: white;
+    font-weight: 500;
+    background-color: var(--navybluecolor);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+}
+
+
+
+/*-----------Whole Section class-------------*/
+
+.section {
+    position: relative;
+    top: 90px;
+    box-sizing: border-box;
+    width: 90%;
+    margin: 60px auto;
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .3);
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+}
+
+.section p {
+    color: rgb(107, 107, 107);
+    font-weight: 500;
+    line-height: 3ch;
+}
+
+.section:hover {
+    transform: scale(1.01);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, .4);
+}
+
+
+/*----Section heading 1------*/
+
+.section h1 {
+    text-align: center;
+    position: relative;
+    padding: 15px;
+    font-family: 'Product sans';
+    font-size: 2.2em;
+    font-weight: bold;
+    align-self: center;
+    color: var(--pinkcolor);
+    overflow: hidden;
+    z-index: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    letter-spacing: 1px;
+}
+
+
+.part1 {
+    margin-left: 40px;
+}
+
+/*------Heading 1 before----------*/
+
+.section h1::before {
+    content: "";
+    position: absolute;
+    height: 35px;
+    width: 40px;
+    border-radius: 10px;
+    background-color: rgba(145, 145, 145, 0.3);
+    z-index: -1;
+    transition: all .4s ease-in-out;
+}
+
+.section:hover #sAbout h1::before {
+    width: 110px;
+}
+
+.section:hover #sSkills h1::before {
+    width: 90px;
+}
+
+.section:hover #sProjects h1::before {
+    width: 140px;
+}
+
+.section:hover #sContact h1::before {
+    width: 135px;
+}
+
+
+/*------Heading 1 after----------*/
+
+.section h1::after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--navybluecolor);
+    transition: all .2s ease-in;
+}
+
+.section:hover h1::after {
+    margin-top: 28px;
+    border-radius: 45%;
+}
+
+
+/*-----Section grid maker-----*/
+
+
+/*-----About-----*/
+
+#sAbout {
+    background: url("img/sectionbackground.jpg") no-repeat;
+    background-size: 80%; 
+    background-position: 50% 50%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: .5fr 3fr .2fr;
+}
+
+#sAbout .part1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: 40px;
+} 
+
+#sAbout .part1 h3 {
+    line-height: 3.5ch;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    padding-left: 15px;
+}
+
+#sAbout .part1 h3::before {
+    content: "";
+    position: absolute;
+    top: 115px;
+    left: 40px;
+    height: 60px;
+    width: 4px;
+    background-color: var(--navybluecolor);
+}
+
+#sAbout a {
+    padding: 15px;
+    background-color: var(--navybluecolor);
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    margin: 40px 0px;
+    margin-bottom: 40px;
+    transition: all .4s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+}
+
+#sAbout a:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+
+#sAbout .part2 {
+    padding: 20px;
+}
+
+#about-para {
+    width: 450px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+/*-----Skills-----*/
+
+#sSkills {
+    background: url("img/skill-bg2.jpg") no-repeat;
+    background-size: 100%;
+    background-position: 50% 50%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: .8fr 3fr .2fr;
+}
+
+
+#sSkills .part1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-left: 40px;
+}
+
+#sSkills .part2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-right: 40px;
+    text-align: right;
+} 
+
+#sSkills .part2 h3 {
+    line-height: 3.5ch;
+    font-size: 1.2em;
+    padding-right: 15px;
+    margin-bottom: 30px;
+}
+
+#sSkills .part2 h3::after {
+    content: "";
+    position: absolute;
+    top: 95px;
+    right: 40px;
+    height: 60px;
+    width: 4px;
+    background-color: var(--bluecolor);
+}
+
+#skills-para {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding-right: 0px;
+    padding-left: auto;
+}
+
+#sSkills h1 {
+    color: #2D2926FF;
+}
+
+.section #sSkills h1::after {
+    background-color: var(--bluecolor);
+}
+
+.progressbar {
+    height: 50px;
+    width: 500px;
+    background: transparent;
+    border: 3px solid #313131;
+    margin: 30px 0px;
+    border-radius: 10px;
+}
+
+.progressbar #pb1::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    height: 20px;
+    width: 100px;
+    background-color: #f64c71;
+}
+
+/*-----Projects-----*/
+
+#sProjects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+/*-----Contact-----*/
+
+
+
+#sContact {
+    align-content: center;
+    justify-content: center;
+}
+
+.section .part1 {
+    margin: 20px auto;
+}
+
+#sContact .part1 form {
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+footer {
+    background: linear-gradient(to bottom,#7a19f1,#332179);
+    background-attachment: fixed;
+}
