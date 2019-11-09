@@ -4,85 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <title>AllwinFranklin</title>
+    <link rel="stylesheet" href="./main.css"> 
+    <link rel="icon" href="./images/logo.png">
+    <title>Allwin Franklin</title>
 </head>
 <body>
-    <nav>
-        <div id="logo_round"><div id="logo_box"><div id="logo"><img src="images/logo.png" alt=""></div></div></div>
-        <menu>
+    <header>
+        <nav>
+            <div id="logo-round">
+                <div id="logo-rect">
+                    <div id="nav-logo">
+                        <img src="./images/logo.png" alt="Logo" height="46px" width="46px">
+                    </div>
+                </div>
+            </div>
             <ul>
                 <a href="#about"><li>About</li></a>
                 <a href="#skills"><li>Skills</li></a>
                 <a href="#projects"><li>Projects</li></a>
                 <a href="#contact"><li>Contact</li></a>
             </ul>
-        </menu>
-    </nav>
-    
+        </nav>
+    </header>
 
-    <div id="about"></div>
-        <div class="section"> 
-            <div id="sAbout">
-                <h1>About</h1>
-                <div class="part1">
-                    <h3><bold>WEB DEVELOPER AND<br/>COMPETETIVE PROGRAMMER</bold></h3>
-                    <div id="about-para"><p>I'm the Front-End Developer. 
+    <main>
+        <div id="about"></div>
+        <section id="about-sec">
+                <div id="aboutheader">
+                    <h2>About</h2>
+                </div>
+            <div id="about-content">
+                <h3>WEB DEVELOPER AND<br/><br/>COMPETETIVE PROGRAMMER</h3>
+                <p>I'm <b>Allwin Franklin</b> the Front-End Developer. 
                         I have serious passion for UI designing, animations and creating intuitive, dynamic user experiences.<br><br>
-                        As a web developer, I enjoy using my obsessive attention to detail, my passionate love for making things, and my mission-driven work ethic to literally change the world.</p>
-                    
-                    </div>
-                    <a href="/Web-technology.pdf" download>Download CV</a>
-                </div>
+                        As a web developer, I enjoy using my obsessive attention to detail, my passionate love for making things, and my mission-driven work ethic to literally change the world.
+                </p>
             </div>
-        </div>
+            <a href="./Web-technology.pdf" download>Download CV</a>
+            <div id="about-img"></div>
+        </section>
 
-    <div id="skills">
-        <div class="section">
-            <div id="sSkills">
-                <h1>Skills</h1>
-                <div class="part1">
-                    <div class="progressbar" id="pb1"></div>
-                    <div class="progressbar" id="pb2"></div>
-                    <div class="progressbar" id="pb3"></div>
-                </div>
-                <div class="part2">
-                        <h3><bold>SOME STUFFS I CATCHED<br/>FROM EARLY YEARS</bold></h3>
-                        <div id="skills-para"><p>I am a young passionate enthusiastic web designer as well as a programmer side by side.
-                            Have a strong foundation on <b>Problem solving</b> and a well defined knowledge on <b>designing</b> web pages.
-                            </p>
-                        </div>
-                </div>
+        <div id="skills"></div>
+        <section id="skills-sec">
+            <div id="skillheader">
+                <h2>Skills</h2>
             </div>
-        </div>
-    </div>
+            <div id="skills-content">
+                <h3><bold>SOME STUFFS I CATCHED<br/><br/>FROM EARLY YEARS</bold></h3>
+                <p>I am a young passionate enthusiastic web designer as well as a programmer side by side.
+                    Have a strong foundation on <b>Problem solving</b> and a well defined knowledge on <b>designing</b> web pages.
+                </p>
+            </div>
+            <p class="empty"></p>
+        </section>
 
-    <div id="projects"></div>
-    <div class="section">
-        <div id="sProjects">
-            <h1>Projects</h1>
-            <div class="part1">
-                    
+        <div id="projects"></div>
+        <section id="projects-sec">
+            <div id="projectsheader">
+                <h2>Projects</h2>
             </div>
-            <div class="part2">
-                
+            <div id="projects-content">
+                <video src="./images/broken.mp4" height="100%" width="100%px" controls></video>
             </div>
-        </div>
-    </div> 
+        </section>
 
-    <div id="contact"></div>
-    <div class="section">
-        <div id="sContact">
-            <h1>Contact</h1>
-            <div class="part1">
-                <form action="post">
-                    <input type="text" placeholder="Your name">
-                    <input type="email" placeholder="Your e-mail Id">
-                    <textarea name="description" id="" cols="30" rows="10" placeholder="description"></textarea>
-                </form>
+        <div id="contact"></div>
+        <section id="contact-sec">
+            <div id="contactheader">
+                <h2>Contact</h2>
             </div>
-        </div>
-    </div>
+            <div id="contact-content">
+                <input type="text" placeholder="Your name" width="100%">
+                <input type="email" placeholder="yourname@mail.com">
+                <textarea name="description" id="" cols="30" rows="10"></textarea>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
